@@ -1,3 +1,8 @@
+# Downloading on desktop/PC
+cmd
+git init in folder
+git clone -b <tag/name> <url>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
