@@ -1,7 +1,7 @@
 # Downloading on desktop/PC
 cmd
 git init in folder.\
-git clone -b <tag/name> <url Eg. https://github.com/AnonymousHackathon/hackathon_20210507.git> .\
+git clone -b <branch name: hackerthon_version_1> <url: https://github.com/AnonymousHackathon/hackathon_20210507.git> .\
 cd into folder.\
 npm install.\
 npm start.\
