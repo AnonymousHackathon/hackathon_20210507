@@ -1,7 +1,10 @@
 # Downloading on desktop/PC
 cmd
-git init in folder
-git clone -b <tag/name> <url>
+git init in folder.\
+git clone -b <tag/name> <url Eg. https://github.com/AnonymousHackathon/hackathon_20210507.git>\
+cd into folder\
+npm install\
+npm start\
 
 # Getting Started with Create React App
 
