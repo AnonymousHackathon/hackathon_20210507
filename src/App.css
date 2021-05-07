@@ -104,3 +104,10 @@ label {
       align-items: center;
       justify-content: center;
     }
+
+    .textbox-medium
+    {
+    padding:10px;
+    height:400px;
+    font-size:20pt;
+    }

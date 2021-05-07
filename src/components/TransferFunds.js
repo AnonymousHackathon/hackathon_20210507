@@ -8,6 +8,7 @@ import mockUserListArray from "../mockdata/mockReceiverList"
 import UserService from "../services/user-service";
 import {mockAccountOptions} from "../mockdata/mockAccountOptions"
 import { Checkbox, Button, makeStyles } from "@material-ui/core";
+import "./components.css";
 
 
 const TransferFunds = () => {
@@ -15,6 +16,7 @@ const TransferFunds = () => {
   const [transferAmount, setTransferAmount] = useState();
   const [accountOptions, SetAccountOptions] = useState([]);
   const [defaultAccountOptions, SetDefaultAccountOptions] = useState();
+  const [receiverNumber, setReceiverNumber] = useState();
   const [eGiftCheck, setEGiftCheck] =  useState();
 
   const buttonStyles = makeStyles({
@@ -35,6 +37,9 @@ const TransferFunds = () => {
   const handleChange = (event) => {
     setEGiftCheck(event.target.checked);
   };
+  const onChangeNumber = (event) => {
+    setReceiverNumber(event.target.value);
+  };
 
   return (
     <div className="container">
@@ -45,13 +50,19 @@ const TransferFunds = () => {
             <div className="form-label">From:
             {/* <TransferAccount account={} /> */}
               <ul className="card-mini">
-                <Dropdown options={accountOptions} onChange={SetAccountOptions} value={defaultAccountOptions} />
+                <Dropdown options={accountOptions} onChange={SetDefaultAccountOptions} value={defaultAccountOptions} />
               </ul>
               </div>
           </div>
           <div className="column-one-half">
             <div className="form-label">To:</div>
             {/* <TransferAccount account={transfer.accountTo} /> */}
+            <input
+              id = "textbox-medium"
+              type="text"
+              value={receiverNumber}
+              onChange={onChangeNumber}
+            />
           </div>
         </div>
         <div className="grid-row">
