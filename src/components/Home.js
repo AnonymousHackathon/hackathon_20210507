@@ -13,29 +13,17 @@ const Home = (props) => {
   useEffect(() => {
     console.log("user is "+user);
     if(user == '' || user == null){
-      props.history.push("/Login");
+      props.history.push("/login");
     }
-    UserService.getPublicContent().then(
-      (response) => {
-        setContent(response.data);
-      },
-      (error) => {
-        const _content =
-          (error.response && error.response.data) ||
-          error.message ||
-          error.toString();
-
-        setContent(_content);
-      }
-    );
   }, []);
 
   return (
     <div className="container" class="full-height">
       <header className="jumbotron">
-        <Typography>Welcome {currentUser.username} to FatCatSwapExpress!!</Typography>
-        <h3>{content}</h3>
-        <h4>testing</h4>
+        <Typography>
+          <h3>Welcome to FatCatSwapExpress!!</h3>
+          <h4>testing</h4>
+        </Typography>
       </header>
     </div>
   );

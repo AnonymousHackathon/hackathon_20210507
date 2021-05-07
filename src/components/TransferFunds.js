@@ -27,21 +27,6 @@ const TransferFunds = () => {
  });
 
   useEffect(() => {
-    UserService.getUserBoard().then(
-      (response) => {
-        setContent(response.data);
-      },
-      (error) => {
-        const _content =
-          (error.response &&
-            error.response.data &&
-            error.response.data.message) ||
-          error.message ||
-          error.toString();
-
-        setContent(_content);
-      }
-    );
     SetAccountOptions(mockAccountOptions);
     SetDefaultAccountOptions(SetAccountOptions[0]);
     setEGiftCheck(false);
