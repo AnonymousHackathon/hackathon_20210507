@@ -1,3 +1,11 @@
+# Downloading on desktop/PC
+cmd
+git init in folder.\
+git clone -b branchName <url: https://github.com/AnonymousHackathon/hackathon_20210507.git> .\
+cd into folder.\
+npm install.\
+npm start.\
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
