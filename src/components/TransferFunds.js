@@ -13,6 +13,7 @@ import "./components.css";
 
 const TransferFunds = () => {
   const [content, setContent] = useState("");
+  const [balance, setBalance] = useState();
   const [transferAmount, setTransferAmount] = useState();
   const [accountOptions, SetAccountOptions] = useState([]);
   const [defaultAccountOptions, SetDefaultAccountOptions] = useState();
@@ -29,6 +30,8 @@ const TransferFunds = () => {
  });
 
   useEffect(() => {
+    //mockBalance, mockAccountOptions
+    setBalance(10000)
     SetAccountOptions(mockAccountOptions);
     SetDefaultAccountOptions(SetAccountOptions[0]);
     setEGiftCheck(false);
@@ -45,6 +48,7 @@ const TransferFunds = () => {
     <div className="container">
       <header className="jumbotron">
         <h3>Fund Transfer</h3>
+        <h5>Balance: ${balance}</h5>
         <div className="cards-grid">
           <div>
             <div className="form-label">From:
@@ -88,7 +92,10 @@ const TransferFunds = () => {
               label="Send as EGift!!"
             />
             <p style = {buttonStyles.ButtonCenter}>
-            <Button variant="contained" color={eGiftCheck?"secondary":"primary"}>
+            <Button variant="contained" 
+              color={eGiftCheck?"secondary":"primary"}
+              // onClick={}>
+              >
               {eGiftCheck?"Send as E-Gift":"Send Now"}
             </Button>
             </p>
